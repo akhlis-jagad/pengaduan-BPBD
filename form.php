@@ -154,9 +154,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Main Form Container -->
     <div class="container form-container">
         <h2 class="text-center mb-4">Form Pengaduan Bencana</h2>
-        <form method="POST" action="" enctype="multipart/form-data">
+        <form method="POST" action="" enctype="multipart/form-data" onsubmit="return validatePhoneNumber()">
             <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
-    
+
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label for="nama" class="form-label">Nama Lengkap</label>
@@ -164,7 +164,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
 
                 <div class="col-md-6 mb-3">
-                    <label for="nama" class="form-label">Nomor HP</label>
+                    <label for="nama" class="form-label">Nomor HP (WhatsApp)</label>
                     <input type="tel" class="form-control" id="nomor_hp" name="nomor_hp" required>
                 </div>
 
@@ -215,13 +215,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 reader.readAsDataURL(input.files[0]);
             }
         }
-    </script>
 
-    <!-- Footer -->
-    <footer class="footer mt-5 py-3 bg-light">
-        <div class="container text-center">
-            <p class="mb-0">Made with <i class="fas fa-heart"></i> by BPBD Kabupaten Kudus</p>
-        </div>
-    </footer>
+        // Validate and adjust phone number
+        function validatePhoneNumber() {
+            var nomor_hp = document.getElementById('nomor_hp').value;
+            if (nomor_hp.startsWith("0")) {
+                nomor_hp = "+62" + nomor_hp.slice(1);
+                document.getElementById('nomor_hp').value = nomor_hp;
+            }
+            return true; // Allow the form to submit
+        }
+    </script>
 </body>
 </html>

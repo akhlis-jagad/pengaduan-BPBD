@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         // Verifikasi password dengan password_verify()
         if (password_verify($password, $row['password'])) {
+            $_SESSION['user_id'] = $row['id'];
             $_SESSION['username'] = $row['username'];
             header("Location: ./dashboard.php");
             exit;

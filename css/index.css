@@ -9,12 +9,30 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+/* Style for BPBD text in orange and bold */
+.brand-text {
+    color: var(--dark-color);
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
 
+.brand-text strong {
+    color: var(--primary-color);
+    font-weight: 800;
+}
 /* Navbar Styles */
+/* Navbar Styling to match form page */
 .navbar {
     background: rgba(255, 255, 255, 0.95) !important;
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .navbar-brand img {
@@ -25,9 +43,38 @@ body {
     border: 2px solid var(--primary-color);
 }
 
+.brand-text {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: var(--dark-color) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: var(--primary-color);
+    color: var(--light-color) !important;
+}
+
+.nav-link.active {
+    background-color: var(--primary-color);
+    color: var(--light-color) !important;
+    font-weight: 600;
+}
+
 /* Update the header text to orange */
 .text-primary {
     color: #FF8C00 !important;
+    color: var(--primary-color);
 }
 
 /* Hero Section - Changed to orange background gradient */

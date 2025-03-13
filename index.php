@@ -13,33 +13,43 @@ session_start();
     
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="assets/image/logo.jpg" alt="BPBD Logo">
-                <span class="ms-2 fw-bold" style="color: #FF8C00;">BPBD Kabupaten Kudus</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="form.php">Pengaduan</a>
-                    <li class="nav-item">
-                        <a class="nav-link" href="kontak.html">Kontak</a>
-                    <li class="nav-item">
-                        <a class="nav-link" href="admin/login.php">Login</a>
-                    </li>
-                </ul>
-            </div>
+   <!-- Navbar -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+    <a class="navbar-brand" href="index.php">
+    <img src="assets/image/logo.jpg" alt="BPBD Logo">
+    <span class="brand-text"><b><span style="color: #FF8C00;">BPBD Kabupaten Kudus</span></b>
+    </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.php">
+                        <i class="fas fa-home"></i> Beranda
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="form.php">
+                        <i class="fas fa-file-alt"></i> Pengaduan
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="kontak.html">
+                        <i class="fas fa-address-book"></i> Kontak
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="admin/login.php">
+                        <i class="fas fa-user"></i> Login
+                    </a>
+                </li>
+            </ul>
         </div>
-    </nav>
-
+    </div>
+</nav>
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -107,9 +117,12 @@ session_start();
                 <div class="col-md-4 mb-4">
                     <h4>Kontak</h4>
                     <p>
-                        <i class="fas fa-phone me-2"></i> +628112996112 <br>
-                        <i class="fas fa-envelope me-2"></i> 
-                        bpbdkabupatenkudus@gmail.com
+                    <a href="https://wa.me/628112996112" target="_blank">
+                        <i class="fas fa-phone me-2"></i> +628112996112
+                    </a> <br>
+                    <a href="mailto:bpbdkabupatenkudus@gmail.com">
+                        <i class="fas fa-envelope me-2"></i> bpbdkabupatenkudus@gmail.com
+                    </a>
                     </p>
                 </div>
                 <div class="col-md-4 mb-4">
