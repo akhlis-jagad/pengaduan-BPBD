@@ -1,3 +1,6 @@
-landing page di index
+-landing page> index.php
+
+
+    (LOGIN ADMIN)
 ussername admin : admin
-passswaord : suri23
+password : suri123
